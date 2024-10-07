@@ -1,14 +1,39 @@
-package eu.andreatt.ejerciciob_dein.controller;
-
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-public class HelloController {
-    @FXML
-    private Label welcomeText;
+public class PleaseProvideControllerClassName {
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Button btnAgregarPersona;
+
+    @FXML
+    private TableColumn<?, ?> colApellido;
+
+    @FXML
+    private TableColumn<?, ?> colEdad;
+
+    @FXML
+    private TableColumn<?, ?> colNombre;
+
+    @FXML
+    private TableView<?> tabla;
+
+    @FXML
+    private TextField txtApellido;
+
+    @FXML
+    private TextField txtEdad;
+
+    @FXML
+    private TextField txtNombre;
+
+    @FXML
+    void agregarPersona(ActionEvent event) {
+
     }
+
 }
