@@ -1,4 +1,4 @@
-package eu.andreatt.ejerciciob_dein;
+package eu.andreatt.ejerciciob_dein.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -1,4 +1,4 @@
-package eu.andreatt.ejerciciob_dein;
+package eu.andreatt.ejerciciob_dein.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
