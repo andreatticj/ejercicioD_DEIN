@@ -5,6 +5,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.property.IntegerProperty;
 
+import java.util.Objects;
+
 public class Persona {
 
     private StringProperty nombre;
@@ -52,5 +54,24 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad.set(edad);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true; // Comprobación de referencia
+        if (o == null || getClass() != o.getClass()) return false; // Comprobación de tipo
+        Persona persona = (Persona) o;
+
+        // Comparar los valores de las propiedades, no las propiedades en sí
+        return Objects.equals(getNombre(), persona.getNombre()) &&
+                Objects.equals(getApellido(), persona.getApellido()) &&
+                getEdad() == persona.getEdad(); // Comparar la edad directamente
+    }
+
+    @Override
+    public int hashCode() {
+        // Utilizar los valores de las propiedades en hashCode
+        return Objects.hash(getNombre(), getApellido(), getEdad());
+    }
+
 }
 
