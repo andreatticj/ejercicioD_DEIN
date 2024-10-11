@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.andreatt.ejerciciob_dein.controller.HelloController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.andreatt.ejercicioc_dein.controller.HelloController">
     <columnConstraints>
         <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
         <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
@@ -21,6 +21,7 @@
         <RowConstraints vgrow="SOMETIMES" />
         <RowConstraints vgrow="SOMETIMES" />
         <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
         <TableView fx:id="tabla" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowSpan="3">
@@ -51,5 +52,7 @@
             </tooltip></TextField>
             <Button fx:id="btnAgregarPersona" onAction="#agregarPersona" text="Agregar Persona" />
         </VBox>
+      <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" text="Modificar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
     </children>
 </GridPane>

@@ -1,4 +1,4 @@
-package eu.andreatt.ejerciciob_dein.model;
+package eu.andreatt.ejercicioc_dein.model;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;

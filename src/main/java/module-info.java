@@ -1,12 +1,12 @@
-module eu.andreatt.ejerciciob_dein {
+module eu.andreatt.ejercicioc_dein {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-//    opens eu.andreatt.ejerciciob_dein to javafx.fxml;
-//    exports eu.andreatt.ejerciciob_dein;
-    exports eu.andreatt.ejerciciob_dein.controller;
-    opens eu.andreatt.ejerciciob_dein.controller to javafx.fxml;
-    exports eu.andreatt.ejerciciob_dein.application;
-    opens eu.andreatt.ejerciciob_dein.application to javafx.fxml;
+//    opens eu.andreatt.ejercicioc_dein to javafx.fxml;
+//    exports eu.andreatt.ejercicioc_dein;
+    exports eu.andreatt.ejercicioc_dein.controller;
+    opens eu.andreatt.ejercicioc_dein.controller to javafx.fxml;
+    exports eu.andreatt.ejercicioc_dein.application;
+    opens eu.andreatt.ejercicioc_dein.application to javafx.fxml;
 }
