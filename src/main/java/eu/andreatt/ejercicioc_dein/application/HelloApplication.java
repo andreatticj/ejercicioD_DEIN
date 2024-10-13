@@ -3,6 +3,7 @@ package eu.andreatt.ejercicioc_dein.application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,6 +25,8 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/eu/andreatt/ejercicioc_dein/fxml/ejercicioC.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 450);
+        Image icon = new Image(getClass().getResourceAsStream("/eu/andreatt/ejercicioc_dein/images/agenda.png"));
+        stage.getIcons().add(icon);
         stage.setMinHeight(300);
         stage.setMinWidth(350);
         stage.setTitle("PERSONAS"); // Título de la ventana
