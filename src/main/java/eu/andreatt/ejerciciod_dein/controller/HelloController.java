@@ -64,14 +64,6 @@ public class HelloController {
 
     }
 
-    private void mostrarInputDialog(Window win) {
-        TextInputDialog dialog = new TextInputDialog("");
-        dialog.setTitle("DATOS");
-        dialog.setHeaderText(null);
-        dialog.initOwner(win);
-        dialog.setContentText("Introduce tu nombre:");
-        Optional<String> result = dialog.showAndWait();
 
-    }
 
 }
