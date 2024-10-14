@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>eu.andreatt</groupId>
-  <artifactId>ejercicioB_DEIN</artifactId>
+  <artifactId>ejercicioD_DEIN</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>ejercicioC_DEIN</name>
 
@@ -72,7 +72,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>eu.andreatt.ejercicioc_dein.application.HelloApplication</mainClass>
+              <mainClass>eu.andreatt.ejerciciod_dein.application.HelloApplication</mainClass>
             </configuration>
           </execution>
         </executions>
