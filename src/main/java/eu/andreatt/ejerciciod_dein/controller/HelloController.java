@@ -31,6 +31,13 @@ public class HelloController {
     @FXML
     private TableColumn<Persona, Integer> colEdad;
 
+    @FXML
+    public void initialize() {
+        colNombre.setCellValueFactory(cellData -> cellData.getValue().nombreProperty());
+        colApellido.setCellValueFactory(cellData -> cellData.getValue().apellidoProperty());
+        colEdad.setCellValueFactory(cellData -> cellData.getValue().edadProperty().asObject());
+    }
+
 
     @FXML
     void agregarPersona(ActionEvent event) {

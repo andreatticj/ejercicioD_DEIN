@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class modalDController {
 
@@ -27,12 +28,17 @@ public class modalDController {
     private TextField txtNombre;
 
     private ObservableList<Persona> personas = FXCollections.observableArrayList();
+    private Persona persona;
 
 
     @FXML
     void cancelar(ActionEvent event) {
-        Platform.exit(); // Cierra la aplicación
+        // Cerrar solo la ventana actual
+        Stage stage = (Stage) btnCancelar.getScene().getWindow();
+        stage.close();
     }
+
+
 
     @FXML
     void guardar(ActionEvent event) {
@@ -58,6 +64,10 @@ public class modalDController {
         }
     }
 
+    // Método para devolver la persona
+    public Persona getPersona() {
+        return persona;
+    }
 
     private String verificarInfo() {
         StringBuilder errores = new StringBuilder();
