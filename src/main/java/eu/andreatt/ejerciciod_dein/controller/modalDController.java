@@ -58,8 +58,8 @@ public class modalDController {
 
             // Comprobar si la persona ya existe
             if (personas.contains(nuevaPersona)) {
-               // mostrarAlertError(win, "Esa persona ya existe");
-                //limpiarCampos();
+               mostrarAlertError(win, "Esa persona ya existe");
+                limpiarCampos();
             } else {
                 // Agregar la nueva persona a la lista
                 personas.add(nuevaPersona);
