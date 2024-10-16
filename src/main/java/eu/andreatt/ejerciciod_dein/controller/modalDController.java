@@ -103,4 +103,5 @@ public class modalDController {
         txtApellido.clear(); // Limpia el campo de apellido
         txtEdad.clear(); // Limpia el campo de edad
     }
+
 }
