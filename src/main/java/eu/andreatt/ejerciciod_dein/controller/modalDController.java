@@ -27,9 +27,12 @@ public class modalDController {
     @FXML
     private TextField txtNombre;
 
-    private ObservableList<Persona> personas = FXCollections.observableArrayList();
     private Persona persona;
+    private ObservableList<Persona> personas; // Cambiar a sin inicializar
 
+    public void setPersonas(ObservableList<Persona> personas) {
+        this.personas = personas;
+    }
 
     @FXML
     void cancelar(ActionEvent event) {
@@ -58,7 +61,7 @@ public class modalDController {
                 // Agregar la nueva persona a la lista
                 personas.add(nuevaPersona);
                 // Limpiar los campos después de agregar
-               // limpiarCampos();
+                limpiarCampos();
                // mostrarAlertInfo(win, "Persona añadida correctamente");
             }
         }
@@ -94,5 +97,10 @@ public class modalDController {
         }
 
         return errores.toString();
+    }
+    private void limpiarCampos() {
+        txtNombre.clear(); // Limpia el campo de nombre
+        txtApellido.clear(); // Limpia el campo de apellido
+        txtEdad.clear(); // Limpia el campo de edad
     }
 }

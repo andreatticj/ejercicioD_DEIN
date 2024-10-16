@@ -46,21 +46,33 @@ public class HelloController {
         ventanaModal();
     }
 
-    private void ventanaModal(){
-        try{
+    private void ventanaModal() {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/eu/andreatt/ejerciciod_dein/fxml/modalD.fxml"));
             Parent root = loader.load();
+
+            // Obtener el controlador del modal
+            modalDController modalController = loader.getController();
+
+            // Pasar la lista de personas al controlador del modal
+            modalController.setPersonas(tabla.getItems());
+
+            // Crear la nueva escena y la ventana modal
             Scene newScene = new Scene(root);
             Stage newStage = new Stage();
             newStage.initModality(Modality.APPLICATION_MODAL);
             newStage.setResizable(false);
             newStage.setWidth(300);
             newStage.setHeight(200);
-            //newStage.initOwner(this.btnNuevo.getScene().getWindow());
             newStage.setScene(newScene);
             newStage.setTitle("Nueva Persona");
-            newStage. showAndWait ();
-            //this.cargarUsuarios(); //cuando se cierre la ventana modal se ejecutará está línea
+
+            // Mostrar la ventana modal y esperar a que se cierre
+            newStage.showAndWait();
+
+            // Actualizar la tabla una vez que se cierra el modal
+            tabla.refresh();
+
         } catch (IOException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
@@ -68,9 +80,8 @@ public class HelloController {
             alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
-
     }
 
 
-
 }
+
