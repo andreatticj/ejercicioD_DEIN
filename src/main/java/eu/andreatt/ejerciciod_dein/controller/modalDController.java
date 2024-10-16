@@ -6,9 +6,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 public class modalDController {
 
@@ -45,6 +47,7 @@ public class modalDController {
 
     @FXML
     void guardar(ActionEvent event) {
+        Window win = ((Button) event.getSource()).getScene().getWindow(); // Obtiene la ventana actual
         String errores = verificarInfo();
         if (errores.isEmpty()){
             String nombre = txtNombre.getText();
@@ -64,7 +67,37 @@ public class modalDController {
                 limpiarCampos();
                // mostrarAlertInfo(win, "Persona añadida correctamente");
             }
+        }else{
+            mostrarAlertError(win, errores); // Muestra errores si los hay
+            return;
         }
+    }
+
+    /**
+     * Muestra una alerta de error con un mensaje específico.
+     *
+     * @param win   La ventana sobre la que se mostrará la alerta.
+     * @param error El mensaje de error a mostrar.
+     */
+    private void mostrarAlertError(Window win, String error) {
+        mostrarAlert(win, Alert.AlertType.ERROR, "ERROR", error); // Llama al método general para mostrar alerta de error
+    }
+
+    /**
+     * Muestra una alerta de acuerdo al tipo, título y contenido especificados.
+     *
+     * @param win       La ventana sobre la que se mostrará la alerta.
+     * @param alertType El tipo de alerta a mostrar.
+     * @param title     El título de la alerta.
+     * @param content   El contenido de la alerta.
+     */
+    private void mostrarAlert(Window win, Alert.AlertType alertType, String title, String content) {
+        Alert alert = new Alert(alertType); // Crea una nueva alerta
+        alert.initOwner(win); // Establece la ventana principal
+        alert.setHeaderText(null); // Sin encabezado
+        alert.setTitle(title); // Establece el título
+        alert.setContentText(content); // Establece el contenido
+        alert.showAndWait(); // Muestra la alerta y espera a que se cierre
     }
 
     // Método para devolver la persona
