@@ -67,6 +67,8 @@ public class modalDController {
                 limpiarCampos();
                // mostrarAlertInfo(win, "Persona añadida correctamente");
             }
+            Stage stage = (Stage) btnCancelar.getScene().getWindow();
+            stage.close();
         }else{
             mostrarAlertError(win, errores); // Muestra errores si los hay
             return;
