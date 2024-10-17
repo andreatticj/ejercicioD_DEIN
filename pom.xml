@@ -6,7 +6,7 @@
   <groupId>eu.andreatt</groupId>
   <artifactId>ejercicioD_DEIN</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>ejercicioC_DEIN</name>
+  <name>ejercicioD_DEIN</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
