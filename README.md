@@ -18,9 +18,9 @@ Para ejecutar esta aplicación, necesitarás:
 ## Estructura del Proyecto
     
     src/: Carpeta que contiene el código fuente de la aplicación.
-        eu/andreatt/ejercicioc_dein/application/: Contiene la clase principal HelloApplication.
-        eu/andreatt/ejercicioc_dein/controller/: Contiene el controlador ´HelloController' y ḿodalDController´ para la lógica de la interfaz gráfica.
-        eu/andreatt/ejercicioc_dein/model/: Contiene la clase Persona, que define el modelo de datos.
+        eu/andreatt/ejerciciod_dein/application/: Contiene la clase principal HelloApplication.
+        eu/andreatt/ejerciciod_dein/controller/: Contiene el controlador ´HelloController' y ḿodalDController´ para la lógica de la interfaz gráfica.
+        eu/andreatt/ejerciciod_dein/model/: Contiene la clase Persona, que define el modelo de datos.
     resources/: Carpeta que contiene los recursos de la aplicación.
         fxml/: Archivos FXML que definen la estructura de la interfaz gráfica.
         images/: Iconos e imágenes utilizados en la aplicación.
