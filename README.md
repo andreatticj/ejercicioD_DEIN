@@ -19,7 +19,7 @@ Para ejecutar esta aplicación, necesitarás:
     
     src/: Carpeta que contiene el código fuente de la aplicación.
         eu/andreatt/ejercicioc_dein/application/: Contiene la clase principal HelloApplication.
-        eu/andreatt/ejercicioc_dein/controller/: Contiene el controlador HelloController para la lógica de la interfaz gráfica.
+        eu/andreatt/ejercicioc_dein/controller/: Contiene el controlador ´HelloController' y ḿodalDController´ para la lógica de la interfaz gráfica.
         eu/andreatt/ejercicioc_dein/model/: Contiene la clase Persona, que define el modelo de datos.
     resources/: Carpeta que contiene los recursos de la aplicación.
         fxml/: Archivos FXML que definen la estructura de la interfaz gráfica.
@@ -34,4 +34,4 @@ Para ejecutar esta aplicación, necesitarás:
     
 ## Uso de la Aplicación
     
-    Agregar Persona: Completa los campos de nombre, apellido y edad, luego haz clic en "Agregar Persona".
+    Agregar Persona: Haz clic en "Agregar Persona", te saldrá una ventana modal, rellena los campos de dale a Guardar, si le das a Cancelar la persona no será guardada en la lista.
